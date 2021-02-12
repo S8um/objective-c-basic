@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  Leeson_04
+//  Lesson_05
 //
-//  Created by admin on 08.02.2021.
+//  Created by admin on 13.02.2021.
 //
 
 #import "ViewController.h"
@@ -16,8 +16,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-   
 }
 
 

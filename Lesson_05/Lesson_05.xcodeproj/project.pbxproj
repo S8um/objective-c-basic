@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842954C225DBE293009EDAE5 /* Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842954C125DBE293009EDAE5 /* Calculate.m */; };
+		842954C925DBF00A009EDAE5 /* Flock.m in Sources */ = {isa = PBXBuildFile; fileRef = 842954C825DBF00A009EDAE5 /* Flock.m */; };
+		842954CD25DBF029009EDAE5 /* Wing.m in Sources */ = {isa = PBXBuildFile; fileRef = 842954CC25DBF029009EDAE5 /* Wing.m */; };
+		842954D125DBF03F009EDAE5 /* Tail.m in Sources */ = {isa = PBXBuildFile; fileRef = 842954D025DBF03F009EDAE5 /* Tail.m */; };
+		842954D525DBF0D4009EDAE5 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = 842954D425DBF0D4009EDAE5 /* Bird.m */; };
 		84E26DB425D728F00022F4E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E26DB325D728F00022F4E0 /* AppDelegate.m */; };
 		84E26DBA25D728F00022F4E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E26DB925D728F00022F4E0 /* ViewController.m */; };
 		84E26DBD25D728F00022F4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E26DBB25D728F00022F4E0 /* Main.storyboard */; };
@@ -16,6 +21,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842954C025DBE293009EDAE5 /* Calculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculate.h; sourceTree = "<group>"; };
+		842954C125DBE293009EDAE5 /* Calculate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculate.m; sourceTree = "<group>"; };
+		842954C725DBF00A009EDAE5 /* Flock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flock.h; sourceTree = "<group>"; };
+		842954C825DBF00A009EDAE5 /* Flock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Flock.m; sourceTree = "<group>"; };
+		842954CB25DBF029009EDAE5 /* Wing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wing.h; sourceTree = "<group>"; };
+		842954CC25DBF029009EDAE5 /* Wing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Wing.m; sourceTree = "<group>"; };
+		842954CF25DBF03F009EDAE5 /* Tail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tail.h; sourceTree = "<group>"; };
+		842954D025DBF03F009EDAE5 /* Tail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tail.m; sourceTree = "<group>"; };
+		842954D325DBF0D4009EDAE5 /* Bird.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		842954D425DBF0D4009EDAE5 /* Bird.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
 		84E26DAF25D728F00022F4E0 /* Lesson_05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson_05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E26DB225D728F00022F4E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84E26DB325D728F00022F4E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +73,8 @@
 		84E26DB125D728F00022F4E0 /* Lesson_05 */ = {
 			isa = PBXGroup;
 			children = (
+				842954C025DBE293009EDAE5 /* Calculate.h */,
+				842954C125DBE293009EDAE5 /* Calculate.m */,
 				84E26DB225D728F00022F4E0 /* AppDelegate.h */,
 				84E26DB325D728F00022F4E0 /* AppDelegate.m */,
 				84E26DB825D728F00022F4E0 /* ViewController.h */,
@@ -67,6 +84,14 @@
 				84E26DC025D728F10022F4E0 /* LaunchScreen.storyboard */,
 				84E26DC325D728F10022F4E0 /* Info.plist */,
 				84E26DC425D728F10022F4E0 /* main.m */,
+				842954C725DBF00A009EDAE5 /* Flock.h */,
+				842954C825DBF00A009EDAE5 /* Flock.m */,
+				842954D325DBF0D4009EDAE5 /* Bird.h */,
+				842954D425DBF0D4009EDAE5 /* Bird.m */,
+				842954CB25DBF029009EDAE5 /* Wing.h */,
+				842954CC25DBF029009EDAE5 /* Wing.m */,
+				842954CF25DBF03F009EDAE5 /* Tail.h */,
+				842954D025DBF03F009EDAE5 /* Tail.m */,
 			);
 			path = Lesson_05;
 			sourceTree = "<group>";
@@ -140,8 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842954D125DBF03F009EDAE5 /* Tail.m in Sources */,
+				842954C225DBE293009EDAE5 /* Calculate.m in Sources */,
+				842954D525DBF0D4009EDAE5 /* Bird.m in Sources */,
 				84E26DBA25D728F00022F4E0 /* ViewController.m in Sources */,
+				842954C925DBF00A009EDAE5 /* Flock.m in Sources */,
 				84E26DB425D728F00022F4E0 /* AppDelegate.m in Sources */,
+				842954CD25DBF029009EDAE5 /* Wing.m in Sources */,
 				84E26DC525D728F10022F4E0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

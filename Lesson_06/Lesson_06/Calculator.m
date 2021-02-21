@@ -9,39 +9,43 @@
 
 @implementation Calculator
 
-CalcBlockFloat sum = ^(float var1, float var2) {
-    return var1 + var2;
+CalcBlockFloat sum = ^(CGFloat var1, CGFloat var2) {
+    return (CGFloat) (var1 + var2);
 };
 
-CalcBlockFloat substraction = ^(float var1, float var2) {
+CalcBlockFloat substraction = ^(CGFloat var1, CGFloat var2) {
     return var1 - var2;
 };
 
-CalcBlockFloat multiplication = ^(float var1, float var2) {
+CalcBlockFloat multiplication = ^(CGFloat var1, CGFloat var2) {
     return var1 * var2;
 };
 
-CalcBlockFloat division = ^(float var1, float var2) {
+CalcBlockFloat division = ^(CGFloat var1, CGFloat var2) {
     if (var2 == 0) {
         NSLog(@"Попытка деления на ноль");
-        return -1.0f;
+        return -1.0;
     }
     return var1 / var2;
 };
 
-CalcBlockInteger remainderOfTheDivision = ^(int var1, int var2) {
+CalcBlockInteger remainderOfTheDivision = ^NSInteger(NSInteger var1, NSInteger var2) {
+    if (var2 == 0) {
+        NSLog(@"Попытка деления на ноль");
+        return -1;
+    }
     return var1 % var2;
 };
 
-CalcBlockInteger exponentiation = ^(int var1, int var2) {
-    int result = 1;
-    for (int i = 0; i < var2; i++) {
+CalcBlockInteger exponentiation = ^(NSInteger var1, NSInteger var2) {
+    NSInteger result = 1;
+    for (NSInteger i = 0; i < var2; i++) {
         result *= var1;
     }
     return result;
 };
 
-+ (float) calculateFloat:(float) var1 execute: (OperationFloat) operation and: (float) var2 {
++ (CGFloat) calculateFloat:(CGFloat) var1 execute: (OperationFloat) operation and: (CGFloat) var2 {
     switch (operation) {
         case OperationAddition:
             return sum(var1, var2);
@@ -60,7 +64,7 @@ CalcBlockInteger exponentiation = ^(int var1, int var2) {
     }
 }
 
-+ (int) calculateInteger:(int) var1 execute: (OperationInteger) operation and: (int) var2 {
++ (NSInteger) calculateInteger:(NSInteger) var1 execute: (OperationInteger) operation and: (NSInteger) var2 {
     switch (operation) {
         case OperationRemainder:
             return remainderOfTheDivision(var1, var2);

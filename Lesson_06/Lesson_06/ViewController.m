@@ -14,42 +14,40 @@
 
 @implementation ViewController
 
-typedef NSInteger (^SumBlock) (NSInteger, NSInteger);
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSLog(@"Task 1");
+    dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
-    float v1 = 2.4;
-    float v2 = 0.6;
-    float answer = -1;
+    CGFloat v1 = 2.4;
+    CGFloat v2 = 0.6;
+    __block CGFloat answer = -1;
     
     int x1 = 11;
     int x2 = 3;
-    int result = -1;
+    __block NSInteger result = -1;
     
-    answer = [Calculator calculateFloat:v1 execute:OperationAddition and:v2];
-    NSLog(@"%2.2f + %2.2f = %2.2f", v1, v2, answer);
-    
-    answer = [Calculator calculateFloat:v1 execute:OperationSubtraction and:v2];
-    NSLog(@"%2.2f - %2.2f = %2.2f", v1, v2, answer);
-    
-    answer = [Calculator calculateFloat:v1 execute:OperationMultiplication and:v2];
-    NSLog(@"%2.2f * %2.2f = %2.2f", v1, v2, answer);
-    
-    answer = [Calculator calculateFloat:v1 execute:OperationDivision and:v2];
-    NSLog(@"%2.2f / %2.2f = %2.2f", v1, v2, answer);
-    
-    result = [Calculator calculateInteger:x1 execute:OperationRemainder and:x2];
-    NSLog(@"%d %% %d = %d", x1, x2, result);
-    
-    result = [Calculator calculateInteger:x1 execute:OperationExponentiation and:x2];
-    NSLog(@"%d ^ %d = %d", x1, x2, result);
-    
-    NSLog(@"");
-    
+    dispatch_async(globalQueue, ^{
+        answer = [Calculator calculateFloat:v1 execute:OperationAddition and:v2];
+        NSLog(@"%2.2f + %2.2f = %2.2f", v1, v2, answer);
+        
+        answer = [Calculator calculateFloat:v1 execute:OperationSubtraction and:v2];
+        NSLog(@"%2.2f - %2.2f = %2.2f", v1, v2, answer);
+        
+        answer = [Calculator calculateFloat:v1 execute:OperationMultiplication and:v2];
+        NSLog(@"%2.2f * %2.2f = %2.2f", v1, v2, answer);
+        
+        answer = [Calculator calculateFloat:v1 execute:OperationDivision and:v2];
+        NSLog(@"%2.2f / %2.2f = %2.2f", v1, v2, answer);
+        
+        result = [Calculator calculateInteger:x1 execute:OperationRemainder and:x2];
+        NSLog(@"%d %% %d = %ld", x1, x2, (long)result);
+        
+        result = [Calculator calculateInteger:x1 execute:OperationExponentiation and:x2];
+        NSLog(@"%d ^ %d = %ld", x1, x2, (long)result);
+        
+    });
 }
 
 

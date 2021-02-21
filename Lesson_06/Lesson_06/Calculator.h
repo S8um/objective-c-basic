@@ -6,11 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef float (^CalcBlockFloat) (float var1, float var2);
-typedef int (^CalcBlockInteger) (int var1, int var2);
+typedef CGFloat (^CalcBlockFloat) (CGFloat var1, CGFloat var2);
+typedef NSInteger (^CalcBlockInteger) (NSInteger var1, NSInteger var2);
 
 typedef enum OperationFloat {
     OperationAddition,
@@ -26,9 +27,9 @@ typedef enum OperationInteger {
 
 @interface Calculator : NSObject
 
-+ (float) calculateFloat:(float) var1 execute: (OperationFloat) operation and: (float) var2;
++ (CGFloat) calculateFloat:(CGFloat) var1 execute: (OperationFloat) operation and: (CGFloat) var2;
 
-+ (int) calculateInteger:(int) var1 execute: (OperationInteger) operation and: (int) var2;
++ (NSInteger) calculateInteger:(NSInteger) var1 execute: (OperationInteger) operation and: (NSInteger) var2;
 
 @end
 
